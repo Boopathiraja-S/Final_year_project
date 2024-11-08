@@ -80,7 +80,9 @@ const webhooks = async (request, response) => {
             const saveOrder = await order.save()
 
             if (saveOrder?._id) {
-                const deleteCartItem = await addToCartModel.deleteMany({userId:session.metadata.userId})
+                const deleteCartItem = await addToCartModel.deleteMany({ userId: session.metadata.userId })
+                console.log(deleteCartItem);
+                
             }
 
             break;
