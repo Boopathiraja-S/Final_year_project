@@ -167,7 +167,7 @@ const Cart = () => {
                             )
                             :
                             (
-                                data.map((product, index) => {
+                                data.map((product) => {
                                     return (
                                         <div key={product?._id + "Add to Cart Loading"}
                                             className='w-full bg-white h-32 my-2 border border-slate-300 rounded grid grid-cols-[128px,1fr]'>
@@ -196,9 +196,13 @@ const Cart = () => {
                                                 </div>
 
                                                 <div className='flex items-center gap-3 mt-2'>
-                                                    <button className='border border-red-600 text-red-600 w-6 h-6 hover:bg-red-600 hover:text-white flex justify-center items-center rounded' onClick={() => decreaseQty(product?._id, product?.quantity)} >-</button>
+                                                    <button 
+                                                    className='border border-red-600 text-red-600 w-6 h-6 hover:bg-red-600 hover:text-white flex justify-center items-center rounded' 
+                                                    onClick={() => decreaseQty(product?._id, product?.quantity)} >-</button>
                                                     <span>{product?.quantity}</span>
-                                                    <button className='border border-red-600 text-red-600 w-6 h-6 hover:bg-red-600 hover:text-white flex justify-center items-center rounded' onClick={() => increaseQty(product?._id, product?.quantity)} >+</button>
+                                                    <button 
+                                                    className='border border-red-600 text-red-600 w-6 h-6 hover:bg-red-600 hover:text-white flex justify-center items-center rounded' 
+                                                    onClick={() => increaseQty(product?._id, product?.quantity)} >+</button>
                                                 </div>
                                             </div>
 
